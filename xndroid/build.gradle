@@ -1,0 +1,52 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    //support
+    api 'com.android.support:support-v4:27.0.2'
+    api 'com.android.support:appcompat-v7:27.0.2'
+    api 'com.android.support:support-annotations:27.0.2'
+    api 'com.android.support:recyclerview-v7:27.0.2'
+    //tools
+    api 'com.google.dagger:dagger:2.14.1'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.14.1'
+    api 'me.yokeyword:fragmentation:1.2.0'
+    api 'org.greenrobot:eventbus:3.1.1'
+    //log
+    api 'com.orhanobut:logger:2.1.1'
+    //rx
+    api 'io.reactivex.rxjava2:rxjava:2.1.7'
+    api 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    api "com.github.VictorAlbertos.RxCache:runtime:1.8.3-2.x"
+    api 'com.github.VictorAlbertos.Jolyglot:gson:0.0.4'
+    api 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.1'
+
+    //network
+    api 'com.squareup.retrofit2:retrofit:2.3.0'
+    api 'com.squareup.retrofit2:converter-gson:2.3.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    api 'me.jessyan:retrofit-url-manager:1.1.0'
+    //imageloader
+    api 'com.github.bumptech.glide:glide:4.5.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.5.0'
+}
+repositories {
+    mavenCentral()
+}
