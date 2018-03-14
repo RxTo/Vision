@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yuki.vision"
-    >
+    package="com.yuki.vision">
 
     <!-- 访问网络 -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -13,29 +12,31 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        >
+        android:theme="@style/AppTheme">
 
         <!-- 配置框架设置 -->
         <meta-data
-            android:name="com.yuki.vision.app.AppConfig"
-            android:value="AppConfig"
-            />
+            android:name="com.yuki.vision.app.config.AppConfig"
+            android:value="AppConfig" />
 
         <activity
-            android:name="com.yuki.vision.SplashActivity"
-            android:theme="@style/AppTheme.FullScreen"
-            />
-        <activity android:name=".MainActivity">
+            android:name="com.yuki.vision.mvp.ui.activity.SplashActivity"
+            android:theme="@style/AppTheme.FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".module.home.search.SearchActivity" />
-        <activity android:name=".module.video.VideoActivity" />
-        <activity android:name=".module.discovery.category.detail.CategoryDetailActivity" />
+        <activity android:name=".mvp.ui.activity.MainActivity">
+
+        </activity>
+        <activity android:name=".mvp.ui.activity.SearchActivity" />
+        <activity
+            android:name=".mvp.ui.activity.VideoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity android:name=".mvp.ui.activity.CategoryDetailActivity" />
     </application>
 
 </manifest>

@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         >
 
-        <com.yuki.vision.widget.loadView.LVBlazeWood
+        <com.yuki.vision.app.widget.loadView.LVBlazeWood
             android:id="@+id/spin_kit"
             android:layout_width="40dp"
             android:layout_height="40dp"

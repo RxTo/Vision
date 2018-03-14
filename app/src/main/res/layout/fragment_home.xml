@@ -19,47 +19,44 @@
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:overScrollMode="never"
             />
 
     </android.support.v4.widget.SwipeRefreshLayout>
-
-    <RelativeLayout
+    <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/color_black"
+        android:layout_height="?actionBarSize"
+        android:fitsSystemWindows="true"
         >
-
-        <com.github.mmin18.widget.RealtimeBlurView
-            android:id="@+id/blurView"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/color_translucent"
-            />
+            >
 
+            <TextView
+                android:id="@+id/tv_header_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/color_item_title"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
 
-        <TextView
-            android:id="@+id/tv_header_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:textColor="@color/color_item_title"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            />
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:transitionName="@string/search_transition_name"
+                tools:src="@mipmap/ic_action_search_black"
+                />
 
-        <ImageView
-            android:id="@+id/iv_search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="15dp"
-            android:transitionName="@string/search_transition_name"
-            tools:src="@mipmap/ic_action_search_black"
-            />
-
-    </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
 
 </RelativeLayout>
